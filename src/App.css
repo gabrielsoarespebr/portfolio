@@ -19,6 +19,16 @@ img {
 }
 
 /* MY STYLESHEET */
+:root {
+  --bluePrimary: #1D7AB8;
+  --blueSecondary: #18A5C0;
+
+  --darkBluePrimary: #003366;
+
+  --blackPrimary: #1D1D1D;
+  --blackSecondary: #2d2d2d;
+}
+
 body {
   font-family: 'Coolvetica', sans-serif;
 }
