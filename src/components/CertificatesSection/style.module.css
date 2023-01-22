@@ -1,0 +1,9 @@
+.section {
+    background: linear-gradient(var(--blackPrimary), var(--blackSecondary));
+    height: 80vh;
+    width: 100%;
+}
+
+.image {
+    filter: drop-shadow(2px 2px 2px black);
+}

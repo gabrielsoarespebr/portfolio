@@ -16,7 +16,7 @@ export const Header = () => {
 
                     <a href={userInfo.url.linkedin} target="_blank"><i data-title="Acesse meu LinkedIn!" className={`text-white fa-brands fa-linkedin fa-3x ${style.icon}`}></i></a>
 
-                    <a href="#"><i data-title="Baixe meu currículo!" id="resumeDownload" className={`text-white fa-solid fa-file-arrow-down fa-3x ${style.icon}`}></i></a>
+                    <a href={userInfo.url.resume}><i data-title="Baixe meu currículo!" id="resumeDownload" className={`text-white fa-solid fa-file-arrow-down fa-3x ${style.icon}`}></i></a>
 
                 </div>
             </div>
