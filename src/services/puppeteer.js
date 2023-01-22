@@ -1,4 +1,4 @@
-import puppeteer from '../../node_modules/puppeteer';
+import puppeteer from '/node_modules/puppeteer';
 
 export let data = [];
 
