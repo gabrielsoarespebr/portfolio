@@ -7,7 +7,7 @@ export const Header = () => {
         <header className={`d-flex justify-content-between position-sticky ${style.header}`}>
             <div className={`align-self-center ${style.containerTxtBtn}`}>
 
-                <h1 className="text-white display-2">{userInfo.fullName.split(" ")[0]} {userInfo.fullName.split(" ")[1]}</h1>
+                <h1 className="text-white display-3">{userInfo.fullName.split(" ")[0]} {userInfo.fullName.split(" ")[1]}</h1>
 
                 <h2 className={`text-white display-5 ${style.subtitle}`}>{userInfo.occupation.name}<span id="underscore" className="visible">_</span></h2>
 

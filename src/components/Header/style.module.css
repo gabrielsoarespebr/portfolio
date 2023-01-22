@@ -1,13 +1,8 @@
-:root {
-    --bluePrimary: #1D7AB8;
-    --blueSecondary: #18A5C0;
-
-    --blackPrimary: #1D1D1D;
-    --blackSecondary: #2d2d2d;
-}
-
 .header {
     background: linear-gradient(var(--bluePrimary), var(--blueSecondary));
+
+    /* RELATIVE FOR SPEECH BUBBLE */
+    position: relative;
 }
 
 .containerTxtBtn {
@@ -47,22 +42,26 @@
     visibility: visible;
 
     text-shadow: none;
+    background: url("https://ouch-cdn2.icons8.com/TvEaAs1yPOpwhrs_6-idZEndll_ZhvJ6xI7zpWOWIkw/rs:fit:256:95/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMTEw/LzQxYjJjZDE4LTZm/ODctNGViZS04Yjc1/LWY5M2FmY2M3MzAw/Zi5zdmc.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 
 }
 
 [data-title]:after {
     content: attr(data-title);
     font-family: 'Coolvetica', sans-serif;
-    font-size: 40%;
+    font-size: 30%;
+    font-weight: normal;
 
-    color: white;
-    background-color: #003366;
+    color: var(--darkBluePrimary);
+    /* background-color: var(--darkBluePrimary); */
     filter: drop-shadow(-7px -7px 7px var(--bluePrimary));
 
-
-    top: 15%;
-    right: 30%;
-    padding: 1%;
+    top: 22%;
+    right: 24%;
+    padding: 2.4% 3.3% 2.5% 1.4%;
     border-radius: .2em;
     position: absolute;
 
@@ -71,8 +70,4 @@
 
     transition: .3s ease-in-out;
 
-}
-
-.header {
-    position: relative;
 }
