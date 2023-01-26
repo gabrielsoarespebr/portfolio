@@ -1,6 +1,12 @@
 import axios from "axios";
 import style from "../components/ProjectsSection/style.module.css"
 
+function updateGallery(id) {
+    // galleryProject.innerHTML += chosenRepos.filter(e => e.id === id);
+    console.log("arroz");
+}
+const chosenRepos = [];
+
 window.addEventListener("load", function () {
     const url = "https://api.github.com/users/gabrielsoarespebr/repos";
 
@@ -13,18 +19,40 @@ window.addEventListener("load", function () {
             projRepoArray.data.filter(eachProj => {
                 if (eachProj.topics.includes("portfolio")) {
                     let projName = eachProj.name ?? "Sem nome";
+                    let projId = eachProj.id ?? "Sem ID";
                     let projDescription = eachProj.description ?? "Sem descrição";
-                    let projUrl = eachProj.html_url ?? "#";
+                    let projGitUrl = eachProj.html_url ?? "#";
+                    let projSiteUrl = eachProj.homepage ?? "Em breve";
+
+                    let separatorIndex = projDescription.search("{");
+                    let projImgsObj = JSON.parse(projDescription.substring(separatorIndex, projDescription.length));
+
+                    projDescription = projDescription.substring(0, (separatorIndex - 1));
+
+                    const repoObj = {
+                        name: projName,
+                        id: projId,
+                        description: projDescription,
+                        url: {
+                            git: projGitUrl,
+                            site: projSiteUrl
+                        },
+                        imgs: projImgsObj
+                    }
+
+                    chosenRepos.push(repoObj);
 
                     listProjects.innerHTML += `
-                    <div class="p-2 rounded ${style.folder}"><i class="fa-solid fa-folder-open"></i> ${projName.toUpperCase()}</div>
+                    <div id="${projId}" onclick="updateGallery(${projId})" title="${projName.toUpperCase()}" class="d-flex p-2 rounded ${style.projIcon}">
+
+                    <img class="align-self-center" src="${projImgsObj.icon}" alt="${projName}"/>
+                    
+                    </div>
                     `;
 
-                    galleryProject.innerHTML += `
-                    <div>${projDescription}</div>
-                    `
                 }
             })
         })
         .catch(err => console.error(err));
-})
+});
+

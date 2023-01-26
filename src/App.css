@@ -37,16 +37,20 @@ body {
 }
 
 /* SCROLL - BACK */
-::-webkit-scrollbar{
-  width: 8px;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   background-color: var(--blackSecondary);
 }
 
 /* SCROLL - FRONT */
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 2rem;
   background-color: var(--darkBluePrimary);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: white;
 }
