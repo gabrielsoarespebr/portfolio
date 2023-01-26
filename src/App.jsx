@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import { Header } from './components/Header';
 import { OccupationSection } from './components/OccupationSection';
-import { CertificatesSection } from './components/CertificatesSection';
+import { ProjectsSection } from './components/ProjectsSection';
+import { SkillsSection } from './components/SkillsSection';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       <Header />
       <OccupationSection />
-      <CertificatesSection />
+      <ProjectsSection />
+      <SkillsSection />
 
     </div>
   )

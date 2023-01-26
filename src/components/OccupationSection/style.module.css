@@ -1,5 +1,5 @@
 .section {
-    background: linear-gradient(var(--blackPrimary), var(--blackSecondary));
+    /* background: linear-gradient(var(--blackPrimary), var(--blackSecondary)); */
     height: 80vh;
     width: 100%;
 }

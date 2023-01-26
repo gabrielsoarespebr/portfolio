@@ -31,12 +31,22 @@ img {
 
 body {
   font-family: 'Coolvetica', sans-serif;
+  background: linear-gradient(220deg, #02132B 50%, #01010D);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* Increase all font sizes on mobile */
-@media (max-width: 767px) {
-  html {
-    /* default is 1rem or 16px */
-    font-size: 25px;
-  }
+/* SCROLL - BACK */
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar{
+  background-color: var(--blackSecondary);
+}
+
+/* SCROLL - FRONT */
+::-webkit-scrollbar-thumb{
+  border-radius: 2rem;
+  background-color: var(--darkBluePrimary);
 }

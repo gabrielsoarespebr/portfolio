@@ -1,0 +1,15 @@
+.section {
+    width: 100%;
+}
+
+.image {
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+.folder {
+    background: linear-gradient(rgb(202, 202, 202), white 10% 90%, rgb(202, 202, 202));
+    /* background: white; */
+    color: var(--darkBluePrimary);
+
+    cursor: pointer;
+}

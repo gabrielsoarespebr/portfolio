@@ -10,7 +10,8 @@ export const userInfo = {
         skillsImages: {
             hardSkills: {
                 experience: [["HTML5", "https://logospng.org/download/html-5/logo-html-5-512.png"], ["CSS3", "https://logospng.org/download/css-3/logo-css-3-512.png"], ["JavaScript", "https://logospng.org/download/javascript/logo-javascript-512.png"]],
-                learning: [["Bootstrap", "https://logospng.org/download/bootstrap/bootstrap-512.png"]]
+                learning: [["Bootstrap", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png"], ["ReactJS", "https://phobosengine.com.br/phobos/docs/images/webtec3.png"],["Git","https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"]],
+                interest: [["React Native","https://phobosengine.com.br/phobos/docs/images/webtec3.png"]]
             }
         },
         otherImages: [["Funny gif", "https://i.kym-cdn.com/photos/images/newsfeed/000/538/716/7f5.gif"]],

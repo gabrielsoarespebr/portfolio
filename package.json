@@ -9,7 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@n-h-n/linkedin-profile-scraper": "^2.7.3",
+    "axios": "^1.2.4",
+    "mkdtemp-async": "^1.0.0",
     "puppeteer": "^19.5.2",
+    "puppeteer-web": "^0.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
