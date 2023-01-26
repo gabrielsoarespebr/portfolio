@@ -1,14 +1,23 @@
-import puppeteer from '/node_modules/puppeteer';
+// import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-web';
 
-export let data = [];
+const allOriginsCORS = "https://api.allorigins.win/get?url=";
+const target = "https://br.linkedin.com/in/gabrielsoarespebr/";
 
-(async () => {
+
+export const data = (async () => {
   // const browser = await puppeteer.launch({ headless: false });
-  const browser = await puppeteer.launch();
+  const browserBase = await puppeteer.launch();
+
+  const browser = await puppeteer.connect({
+    browserWSEndpoint: browserBase.wsEndpoint(),
+    ignoreHTTPSErrors: true
+  });
+
   const page = await browser.newPage();
 
-  await page.setViewport({ width: 1280, height: 800 });
-  await page.goto('https://br.linkedin.com/in/gabrielsoarespebr/', {
+  // await page.setViewport({ width: 1280, height: 800 });
+  await page.goto(`${allOriginsCORS}${target}`, {
     waitUntil: "domcontentloaded",
   });
 
@@ -32,9 +41,8 @@ export let data = [];
     });
   }, selector);
 
-
-  data = [...certificatesArray];
-
   await browser.close();
-})()
-  .then(function () { console.log(data) })
+  return await certificatesArray;
+})();
+
+setInterval((e=>console.log(data)),1000);
