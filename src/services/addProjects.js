@@ -1,4 +1,4 @@
-import axios from "../../node_modules/axios";
+import axios from "axios";
 import style from "../components/ProjectsSection/style.module.css"
 
 function updateGallery(id) {
