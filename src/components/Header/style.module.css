@@ -43,10 +43,11 @@
 
     text-shadow: none;
     background: url("https://ouch-cdn2.icons8.com/TvEaAs1yPOpwhrs_6-idZEndll_ZhvJ6xI7zpWOWIkw/rs:fit:256:95/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMTEw/LzQxYjJjZDE4LTZm/ODctNGViZS04Yjc1/LWY5M2FmY2M3MzAw/Zi5zdmc.png");
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-
+    overflow: visible;
 }
 
 [data-title]:after {
@@ -56,8 +57,8 @@
     font-weight: normal;
 
     color: var(--darkBluePrimary);
-    /* background-color: var(--darkBluePrimary); */
     filter: drop-shadow(-7px -7px 7px var(--bluePrimary));
+    background-position: center;
 
     top: 22%;
     right: 24%;
