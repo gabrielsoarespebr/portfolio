@@ -20,7 +20,7 @@ export const SkillsSection = () => {
                 <ul id="skillsInt" className="list-unstyled d-flex gap-4">
                 </ul>
             </div>
-            <form id="certificates" className="col-6 overflow-auto">
+            <form id="certificates" className="col-6">
                 <h3 className="text-white">Certificados</h3>
                 <div className="input-group">
                     <input className="form-control" type="search" name="" id="" />
@@ -51,7 +51,7 @@ export const SkillsSection = () => {
                     <li id="#jur">Direito <span></span></li>
                 </ul>
 
-                <ul id="certificatesList" className="text-white list-group">
+                <ul id="certificatesList" className={`${style.certificatesList} text-white list-group`}>
                 </ul>
             </form>
 

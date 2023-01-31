@@ -33,9 +33,15 @@
     border-radius: .5em;
 
     font-size: 50%;
+    cursor: pointer;
 }
 
 .orgName {
     font-size: 60%;
     margin: 0;
+}
+
+.certificatesList{
+    height: 65vh;
+    overflow: auto;
 }
