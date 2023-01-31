@@ -27,42 +27,25 @@ window.addEventListener("load", function () {
 
     searchTagBtns.forEach(tagBtn => {
         tagBtn.addEventListener("click", selectedTagBtn => {
-
-            searchTagBtns.forEach(e => {
-                e.setAttribute("style", "background-color: white");
-            })
-
-            selectedTagBtn.target.style.backgroundColor = "gray";
-            selectedTagBtn.target.style.color = "white";
-
-            certificatesList.innerHTML = "";
-
-            const selectedCertificates = userInfo.certificates.filter(certificate => certificate.tags.includes(selectedTagBtn.target.id));
-
-            selectedCertificates.forEach(certificate => {
-                certificatesList.innerHTML += `<li class="list-group-item ${certificate.tags}">${certificate.title}<p class="${style.orgName}">${certificate.org}</p></li>`
-            });
-
-
+            resetList(selectedTagBtn);
         })
-    })
+    });
 
-    // const searchTagBtns = document.querySelectorAll("#searchTags>li");
-    // const certificates = document.querySelectorAll("#certificatesList>li");
+    function resetList(elementClicked) {
+        searchTagBtns.forEach(e => {
+            e.setAttribute("style", "background-color: white");
+        })
 
-    // searchTagBtns.forEach(button => {
-    //     button.addEventListener("click", selected => {
-    //         certificates.forEach(certificate => {
-    //             certificate.classList.toggle("d-none");
-    //             button.classList.toggle("bg-secondary");
-    //             button.classList.toggle("text-white");
+        elementClicked.target.style.backgroundColor = "gray";
+        elementClicked.target.style.color = "white";
 
-    //             if (certificate.className.includes(selected.target.id)) {
-    //                 certificate.classList.toggle("d-none");
-    //             }
-    //         })
-    //     })
-    // })
+        certificatesList.innerHTML = "";
 
+        const selectedCertificates = userInfo.certificates.filter(certificate => certificate.tags.includes(elementClicked.target.id));
+
+        selectedCertificates.forEach(certificate => {
+            certificatesList.innerHTML += `<li class="list-group-item ${certificate.tags}">${certificate.title}<p class="${style.orgName}">${certificate.org}</p></li>`
+        });
+
+    }
 })
-
